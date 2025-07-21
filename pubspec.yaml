@@ -2,7 +2,7 @@ name: sampleappfrontend
 description: "A new Flutter project."
 # The following line prevents the package from being accidentally published to
 # pub.dev using `flutter pub publish`. This is preferred for private packages.
-publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+publish_to: "none" # Remove this line if you wish to publish to pub.dev
 
 # The following defines the version and build number for your application.
 # A version number is three numbers separated by dots, like 1.2.43
@@ -34,6 +34,16 @@ dependencies:
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.8
+  flutter_secure_storage: ^9.2.4
+  google_sign_in: ^6.1.4
+  fluttertoast: ^8.2.12
+  http: 1.1.0
+  shared_preferences: ^2.5.3
+  animated_text_kit: ^4.2.2
+  google_fonts: ^6.2.1
+  lottie: ^2.7.0
+  carousel_slider: ^5.0.0
+  video_player: ^2.10.0
 
 dev_dependencies:
   flutter_test:
@@ -51,16 +61,31 @@ dev_dependencies:
 
 # The following section is specific to Flutter packages.
 flutter:
-
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in
   # the material Icons class.
   uses-material-design: true
 
   # To add assets to your application, add an assets section, like this:
-  # assets:
-  #   - images/a_dot_burr.jpeg
-  #   - images/a_dot_ham.jpeg
+  assets:
+    - assets/images/car_logo.png
+    - assets/images/google.png
+    - assets/videos/car.mp4
+    - assets/images/tesla.jpg
+    - assets/images/leaf.jpg
+    - assets/images/bmwi4.jpg
+    - assets/images/etron.jpg
+    - assets/images/ioniq5.jpg
+    - assets/images/bmw.jpg
+    - assets/images/audi.jpg
+    - assets/images/porsche911.jpg
+    - assets/images/corvette.jpg
+    - assets/images/huracan.jpg
+    - assets/images/mustang.jpg
+    - assets/images/camaro.jpg
+    - assets/images/challenger.jpg
+    - assets/images/charger.jpg
+    - assets/images/gto.jpg
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/to/resolution-aware-images
