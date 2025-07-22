@@ -1,6 +1,6 @@
 
 # Use a Flutter base image that supports web builds
-FROM cirrusci/flutter:latest
+FROM ghcr.io/cirruslabs/flutter:3.22.1
 
 # Set the working directory
 WORKDIR /app
