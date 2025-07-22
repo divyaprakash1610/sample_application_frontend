@@ -1,19 +1,11 @@
-FROM ghcr.io/cirruslabs/flutter:3.32.7
+FROM nginx:alpine
 
-# Set working directory
-WORKDIR /app
+# Remove default nginx static files
+RUN rm -rf /usr/share/nginx/html/*
 
-# Copy pubspec files first (for caching)
-COPY pubspec.yaml pubspec.lock ./
+# Copy the built web files to nginx's public folder
+COPY build/web /usr/share/nginx/html
 
-# Get dependencies
-RUN flutter pub get
+EXPOSE 8080
 
-# Copy rest of the code
-COPY . .
-
-# Build the web app
-RUN flutter build web
-
-# Serve the web app
-CMD ["flutter", "run", "-d", "web-server", "--web-port", "8080"]
+CMD ["nginx", "-g", "daemon off;"]
